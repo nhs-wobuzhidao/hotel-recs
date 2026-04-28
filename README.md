@@ -94,4 +94,4 @@ Typical features used in the models may include:
 
 ## 🤝 Contributors
 
-- Your Name Here
+- Anoushka, Darren, Dimitriye

@@ -24,7 +24,7 @@ Build and evaluate models that accurately predict a user's rating for a hotel at
 ### 🔹 Baseline Models
 
 - **K-Nearest Neighbors (KNN)**  
-  Captures similarity between users or items based on past interactions.
+  Captures similarity between users or items based on past interactions. (Note, requires >50GB of RAM to run. Use `knn_cf.py --help` to see available options.)
 
 - **Two-Tower Neural Network**  
   Learns separate embeddings for users and hotels, then combines them to predict ratings.
@@ -40,7 +40,7 @@ Build and evaluate models that accurately predict a user's rating for a hotel at
   Effective for sparse data; models pairwise feature interactions (e.g., user–hotel relationships).
 
 - **XGBoost**  
-  High-performance gradient boosting model with strong regularization and scalability.
+  High-performance gradient boosting model with strong regularization and scalability. (Note, requires >50GB of RAM to run. Use `light_gbm.py --help` to see available options.)
 
 ---
 

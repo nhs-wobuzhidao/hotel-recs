@@ -1669,6 +1669,8 @@ def _parse_features(arg, method):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
+    parser.add_argument("--data", type=str, default=FILEPATH,
+                        help=f"Path to the input dataset file (default: {FILEPATH}).")
     parser.add_argument("--baseline", action="store_true", help="Just predict global mean for all samples")
     parser.add_argument("--method", "-m", choices=METHODS, default="knn", help="Model: knn or lightgbm")
     parser.add_argument("--features", "-f", default=None,
@@ -1706,6 +1708,8 @@ if __name__ == "__main__":
     parser.add_argument("--residualize", action="store_true",
                         help="Train on (rating - item_mean) and add baseline back at predict time.")
     args = parser.parse_args()
+
+    FILEPATH = args.data
 
     if args.baseline:
         baseline()
